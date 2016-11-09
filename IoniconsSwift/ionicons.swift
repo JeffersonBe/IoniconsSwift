@@ -13,9 +13,9 @@ import UIKit
 
 private var loaded = false
 private func load(){
-	if loaded {
-		return
-	}
+    guard loaded != true else {
+        return
+    }
 	loaded = true
     let inData = try? Data(contentsOf: URL(fileURLWithPath: Bundle(identifier: "org.cocoapods.IoniconsSwift")!.path(forResource: "ionicons", ofType: "ttf")!))
 	var error : Unmanaged<CFError>?
