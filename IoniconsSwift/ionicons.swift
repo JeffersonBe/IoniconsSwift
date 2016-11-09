@@ -9,7 +9,14 @@
 *
 * The Ionicons TTF font file was originated from http://ionicons.com/
 */
-import UIKit
+
+#if os(iOS) || os(tvOS)
+    import UIKit
+#elseif os(watchOS)
+    import WatchKit
+#else
+    import AppKit
+#endif
 
 private var loaded = false
 
