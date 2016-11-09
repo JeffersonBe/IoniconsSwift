@@ -85,7 +85,7 @@ public enum Ionicons : UInt16, CustomStringConvertible {
     }
     
     public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, self.contentFrame)
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
         color.setFill()
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
