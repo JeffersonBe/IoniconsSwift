@@ -67,30 +67,30 @@ public enum Ionicons : UInt16, CustomStringConvertible {
     
 #elseif os(watchOS)
     public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> WKInterfaceLabel {
-    // load()
-    var label: WKInterfaceLabel!
-    let customFont = UIFont(name: "ionicons", size: size)
-    let text = description
-    let titleParagraphStyle = NSMutableParagraphStyle()
-    titleParagraphStyle.alignment = .center
-    let attributes = [
-    NSForegroundColorAttributeName : color,
-    NSFontAttributeName : customFont!,
-    NSTextEffectAttributeName : NSTextEffectLetterpressStyle,
-    NSParagraphStyleAttributeName : titleParagraphStyle
-    ] as [String : Any]
-    let attrStr = NSAttributedString(string: text, attributes: attributes)
-    label.setAttributedText(attrStr)
-    return label
+    load()
+        let label: WKInterfaceLabel!
+        let customFont = UIFont(name: "ionicons", size: size)
+        let text = description
+        let titleParagraphStyle = NSMutableParagraphStyle()
+        titleParagraphStyle.alignment = .center
+        let attributes = [
+            NSForegroundColorAttributeName : color,
+            NSFontAttributeName : customFont!,
+            NSTextEffectAttributeName : NSTextEffectLetterpressStyle,
+            NSParagraphStyleAttributeName : titleParagraphStyle
+        ] as [String : Any]
+        let attrStr = NSAttributedString(string: text, attributes: attributes)
+        label.setAttributedText(attrStr)
+        return label
     }
     
     public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
-    let label = self.label(size, color: color)
-    UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, self.contentFrame)
-    label.layer.render(in: UIGraphicsGetCurrentContext()!)
-    let image = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
-    return image!
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, self.contentFrame)
+        color.setFill()
+        self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
     }
 #else
     public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> UILabel {
