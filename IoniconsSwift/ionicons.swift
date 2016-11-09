@@ -12,21 +12,27 @@
 import UIKit
 
 private var loaded = false
+
 private func load(){
     guard loaded != true else {
         return
     }
+    
 	loaded = true
+    
     let inData = try? Data(contentsOf: URL(fileURLWithPath: Bundle(identifier: "org.cocoapods.IoniconsSwift")!.path(forResource: "ionicons", ofType: "ttf")!))
 	var error : Unmanaged<CFError>?
 	let provider = CGDataProvider(data: inData as! CFData)
 	let font = CGFont(provider!)
-	if !CTFontManagerRegisterGraphicsFont(font, &error) {
+	
+    if !CTFontManagerRegisterGraphicsFont(font, &error) {
 		let errorDescription = CFErrorCopyDescription(error!.takeRetainedValue())
-		NSLog("Failed to load font: %@", errorDescription as! String);
+		print("Failed to load font: ", errorDescription as! String)
 	}
 }
+
 public enum Ionicons : UInt16, CustomStringConvertible {
+    
     public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> UILabel {
 		load()
 		let label = UILabel()
@@ -39,7 +45,8 @@ public enum Ionicons : UInt16, CustomStringConvertible {
 		label.accessibilityElementsHidden = true
 		return label
 	}
-	public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
+	
+    public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
 		let label = self.label(size, color: color)
 		UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, UIScreen.main.scale)
 		label.layer.render(in: UIGraphicsGetCurrentContext()!)
@@ -47,6 +54,7 @@ public enum Ionicons : UInt16, CustomStringConvertible {
 		UIGraphicsEndImageContext();
 		return image!
 	}
+    
     public var description : String {
         return String(describing: UnicodeScalar(rawValue)!)
     }

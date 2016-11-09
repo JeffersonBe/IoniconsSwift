@@ -18,8 +18,6 @@
 		03DB260E1B27577700F9F073 /* IoniconsSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IoniconsSwift.h; sourceTree = "<group>"; };
 		03DB26251B27597000F9F073 /* ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ionicons.swift; sourceTree = "<group>"; };
 		03DB26261B27597000F9F073 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
-		44FB03C81DD337DA00696E5F /* IoniconsSwifttvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IoniconsSwifttvOS.h; sourceTree = "<group>"; };
-		44FB03C91DD337DA00696E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44FB03D71DD3388100696E5F /* IoniconsSwifttvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IoniconsSwifttvOS.h; sourceTree = "<group>"; };
 		44FB03D81DD3388100696E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,7 +37,6 @@
 			isa = PBXGroup;
 			children = (
 				03DB260B1B27577700F9F073 /* IoniconsSwift */,
-				44FB03C71DD337DA00696E5F /* IoniconsSwifttvOS */,
 				44FB03D61DD3388100696E5F /* IoniconsSwifttvOS */,
 				03DB260A1B27577700F9F073 /* Products */,
 			);
@@ -56,9 +53,9 @@
 		03DB260B1B27577700F9F073 /* IoniconsSwift */ = {
 			isa = PBXGroup;
 			children = (
+				03DB260E1B27577700F9F073 /* IoniconsSwift.h */,
 				03DB26251B27597000F9F073 /* ionicons.swift */,
 				03DB26261B27597000F9F073 /* ionicons.ttf */,
-				03DB260E1B27577700F9F073 /* IoniconsSwift.h */,
 				03DB260C1B27577700F9F073 /* Supporting Files */,
 			);
 			path = IoniconsSwift;
@@ -70,15 +67,6 @@
 				03DB260D1B27577700F9F073 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		44FB03C71DD337DA00696E5F /* IoniconsSwifttvOS */ = {
-			isa = PBXGroup;
-			children = (
-				44FB03C81DD337DA00696E5F /* IoniconsSwifttvOS.h */,
-				44FB03C91DD337DA00696E5F /* Info.plist */,
-			);
-			path = IoniconsSwifttvOS;
 			sourceTree = "<group>";
 		};
 		44FB03D61DD3388100696E5F /* IoniconsSwifttvOS */ = {
@@ -223,7 +211,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = "";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchos appletv appletvsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator appletv appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -270,7 +258,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = "";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchos appletv appletvsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator appletv appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -299,7 +287,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = "";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchsimulator watchos macosx";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
@@ -324,7 +312,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = "";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchsimulator watchos macosx";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
@@ -341,7 +329,7 @@
 				03DB261E1B27577700F9F073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		03DB261F1B27577700F9F073 /* Build configuration list for PBXNativeTarget "IoniconsSwift" */ = {
 			isa = XCConfigurationList;
@@ -350,7 +338,7 @@
 				03DB26211B27577700F9F073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
