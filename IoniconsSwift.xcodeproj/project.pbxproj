@@ -18,8 +18,6 @@
 		03DB260E1B27577700F9F073 /* IoniconsSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IoniconsSwift.h; sourceTree = "<group>"; };
 		03DB26251B27597000F9F073 /* ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ionicons.swift; sourceTree = "<group>"; };
 		03DB26261B27597000F9F073 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
-		44FB03D71DD3388100696E5F /* IoniconsSwifttvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IoniconsSwifttvOS.h; sourceTree = "<group>"; };
-		44FB03D81DD3388100696E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +35,6 @@
 			isa = PBXGroup;
 			children = (
 				03DB260B1B27577700F9F073 /* IoniconsSwift */,
-				44FB03D61DD3388100696E5F /* IoniconsSwifttvOS */,
 				03DB260A1B27577700F9F073 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,15 +64,6 @@
 				03DB260D1B27577700F9F073 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		44FB03D61DD3388100696E5F /* IoniconsSwifttvOS */ = {
-			isa = PBXGroup;
-			children = (
-				44FB03D71DD3388100696E5F /* IoniconsSwifttvOS.h */,
-				44FB03D81DD3388100696E5F /* Info.plist */,
-			);
-			path = IoniconsSwifttvOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

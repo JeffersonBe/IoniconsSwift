@@ -10,6 +10,8 @@
 * The Ionicons TTF font file was originated from http://ionicons.com/
 */
 
+import Foundation
+
 #if os(iOS) || os(tvOS)
     import UIKit
 #elseif os(watchOS)
@@ -40,6 +42,57 @@ private func load(){
 
 public enum Ionicons : UInt16, CustomStringConvertible {
     
+#if os(iOS)
+    public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> UILabel {
+        load()
+        let label = UILabel()
+        label.font = UIFont(name: "ionicons", size: size)
+        label.text = description
+        label.textColor = color
+        label.textAlignment = .center
+        label.backgroundColor = UIColor.clear
+        label.frame = CGRect(x: 0, y: 0, width: size, height: size)
+        label.accessibilityElementsHidden = true
+        return label
+    }
+    
+    public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
+        let label = self.label(size, color: color)
+        UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, UIScreen.main.scale)
+        label.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext();
+        return image!
+    }
+    
+#elseif os(watchOS)
+    public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> WKInterfaceLabel {
+    // load()
+    var label: WKInterfaceLabel!
+    let customFont = UIFont(name: "ionicons", size: size)
+    let text = description
+    let titleParagraphStyle = NSMutableParagraphStyle()
+    titleParagraphStyle.alignment = .center
+    let attributes = [
+    NSForegroundColorAttributeName : color,
+    NSFontAttributeName : customFont!,
+    NSTextEffectAttributeName : NSTextEffectLetterpressStyle,
+    NSParagraphStyleAttributeName : titleParagraphStyle
+    ] as [String : Any]
+    let attrStr = NSAttributedString(string: text, attributes: attributes)
+    label.setAttributedText(attrStr)
+    return label
+    }
+    
+    public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
+    let label = self.label(size, color: color)
+    UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, self.contentFrame)
+    label.layer.render(in: UIGraphicsGetCurrentContext()!)
+    let image = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return image!
+    }
+#else
     public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> UILabel {
 		load()
 		let label = UILabel()
@@ -61,6 +114,7 @@ public enum Ionicons : UInt16, CustomStringConvertible {
 		UIGraphicsEndImageContext();
 		return image!
 	}
+#endif
     
     public var description : String {
         return String(describing: UnicodeScalar(rawValue)!)
