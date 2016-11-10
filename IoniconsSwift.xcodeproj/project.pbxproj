@@ -15,6 +15,7 @@
 		4438B46D1DD48AE300807ABB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03DB260D1B27577700F9F073 /* Info.plist */; };
 		4438B46E1DD48AE400807ABB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03DB260D1B27577700F9F073 /* Info.plist */; };
 		4438B4701DD48B4D00807ABB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4438B46F1DD48B4D00807ABB /* Info.plist */; };
+		4438B4731DD48BB700807ABB /* ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB26251B27597000F9F073 /* ionicons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -225,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4438B4731DD48BB700807ABB /* ionicons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
