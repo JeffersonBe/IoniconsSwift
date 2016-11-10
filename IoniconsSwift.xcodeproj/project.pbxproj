@@ -14,14 +14,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03DB26091B27577700F9F073 /* IoniconsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IoniconsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DB26091B27577700F9F073 /* IoniconsSwiftiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IoniconsSwiftiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DB260D1B27577700F9F073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DB260E1B27577700F9F073 /* IoniconsSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IoniconsSwift.h; sourceTree = "<group>"; };
 		03DB26251B27597000F9F073 /* ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ionicons.swift; sourceTree = "<group>"; };
 		03DB26261B27597000F9F073 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		4438B4531DD487E000807ABB /* InioniconsSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InioniconsSwift.h; sourceTree = "<group>"; };
 		4438B4541DD487E000807ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4438B4611DD4892A00807ABB /* IoniconsSwift-tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "IoniconsSwift-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4438B4611DD4892A00807ABB /* IoniconsSwifttvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IoniconsSwifttvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4438B4631DD4892B00807ABB /* IoniconsSwift-tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IoniconsSwift-tvOS.h"; sourceTree = "<group>"; };
 		4438B4641DD4892B00807ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,8 +57,8 @@
 		03DB260A1B27577700F9F073 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				03DB26091B27577700F9F073 /* IoniconsSwift.framework */,
-				4438B4611DD4892A00807ABB /* IoniconsSwift-tvOS.framework */,
+				03DB26091B27577700F9F073 /* IoniconsSwiftiOS.framework */,
+				4438B4611DD4892A00807ABB /* IoniconsSwifttvOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,9 +122,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		03DB26081B27577700F9F073 /* IoniconsSwift-iOS */ = {
+		03DB26081B27577700F9F073 /* IoniconsSwiftiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03DB261F1B27577700F9F073 /* Build configuration list for PBXNativeTarget "IoniconsSwift-iOS" */;
+			buildConfigurationList = 03DB261F1B27577700F9F073 /* Build configuration list for PBXNativeTarget "IoniconsSwiftiOS" */;
 			buildPhases = (
 				03DB26041B27577700F9F073 /* Sources */,
 				03DB26051B27577700F9F073 /* Frameworks */,
@@ -135,14 +135,14 @@
 			);
 			dependencies = (
 			);
-			name = "IoniconsSwift-iOS";
+			name = IoniconsSwiftiOS;
 			productName = IoniconsSwift;
-			productReference = 03DB26091B27577700F9F073 /* IoniconsSwift.framework */;
+			productReference = 03DB26091B27577700F9F073 /* IoniconsSwiftiOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4438B4601DD4892A00807ABB /* IoniconsSwift-tvOS */ = {
+		4438B4601DD4892A00807ABB /* IoniconsSwifttvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4438B4661DD4892B00807ABB /* Build configuration list for PBXNativeTarget "IoniconsSwift-tvOS" */;
+			buildConfigurationList = 4438B4661DD4892B00807ABB /* Build configuration list for PBXNativeTarget "IoniconsSwifttvOS" */;
 			buildPhases = (
 				4438B45C1DD4892A00807ABB /* Sources */,
 				4438B45D1DD4892A00807ABB /* Frameworks */,
@@ -153,9 +153,9 @@
 			);
 			dependencies = (
 			);
-			name = "IoniconsSwift-tvOS";
+			name = IoniconsSwifttvOS;
 			productName = "IoniconsSwift-tvOS";
-			productReference = 4438B4611DD4892A00807ABB /* IoniconsSwift-tvOS.framework */;
+			productReference = 4438B4611DD4892A00807ABB /* IoniconsSwifttvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -191,8 +191,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				03DB26081B27577700F9F073 /* IoniconsSwift-iOS */,
-				4438B4601DD4892A00807ABB /* IoniconsSwift-tvOS */,
+				03DB26081B27577700F9F073 /* IoniconsSwiftiOS */,
+				4438B4601DD4892A00807ABB /* IoniconsSwifttvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -429,7 +429,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03DB261F1B27577700F9F073 /* Build configuration list for PBXNativeTarget "IoniconsSwift-iOS" */ = {
+		03DB261F1B27577700F9F073 /* Build configuration list for PBXNativeTarget "IoniconsSwiftiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03DB26201B27577700F9F073 /* Debug */,
@@ -438,7 +438,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4438B4661DD4892B00807ABB /* Build configuration list for PBXNativeTarget "IoniconsSwift-tvOS" */ = {
+		4438B4661DD4892B00807ABB /* Build configuration list for PBXNativeTarget "IoniconsSwifttvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4438B4671DD4892B00807ABB /* Debug */,

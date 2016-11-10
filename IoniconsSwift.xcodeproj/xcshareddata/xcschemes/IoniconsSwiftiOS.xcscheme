@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4438B4601DD4892A00807ABB"
-               BuildableName = "IoniconsSwift-tvOS.framework"
-               BlueprintName = "IoniconsSwift-tvOS"
+               BlueprintIdentifier = "03DB26081B27577700F9F073"
+               BuildableName = "IoniconsSwiftiOS.framework"
+               BlueprintName = "IoniconsSwiftiOS"
                ReferencedContainer = "container:IoniconsSwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4438B4601DD4892A00807ABB"
-            BuildableName = "IoniconsSwift-tvOS.framework"
-            BlueprintName = "IoniconsSwift-tvOS"
+            BlueprintIdentifier = "03DB26081B27577700F9F073"
+            BuildableName = "IoniconsSwiftiOS.framework"
+            BlueprintName = "IoniconsSwiftiOS"
             ReferencedContainer = "container:IoniconsSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4438B4601DD4892A00807ABB"
-            BuildableName = "IoniconsSwift-tvOS.framework"
-            BlueprintName = "IoniconsSwift-tvOS"
+            BlueprintIdentifier = "03DB26081B27577700F9F073"
+            BuildableName = "IoniconsSwiftiOS.framework"
+            BlueprintName = "IoniconsSwiftiOS"
             ReferencedContainer = "container:IoniconsSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
