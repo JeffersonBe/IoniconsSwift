@@ -14,112 +14,14 @@ import Foundation
 
 #if os(iOS) || os(tvOS)
     import UIKit
-#elseif os(watchOS)
-    import WatchKit
 #else
     import AppKit
 #endif
 
 private var loaded = false
 
-private func load(){
-    guard loaded != true else {
-        return
-    }
-    
-	loaded = true
-    
-    let inData = try? Data(contentsOf: URL(fileURLWithPath: Bundle(identifier: "org.cocoapods.IoniconsSwift")!.path(forResource: "ionicons", ofType: "ttf")!))
-	var error : Unmanaged<CFError>?
-	let provider = CGDataProvider(data: inData as! CFData)
-	let font = CGFont(provider!)
-	
-    if !CTFontManagerRegisterGraphicsFont(font, &error) {
-		let errorDescription = CFErrorCopyDescription(error!.takeRetainedValue())
-		print("Failed to load font: ", errorDescription as! String)
-	}
-}
-
 public enum Ionicons : UInt16, CustomStringConvertible {
     
-#if os(iOS)
-    public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> UILabel {
-        load()
-        let label = UILabel()
-        label.font = UIFont(name: "ionicons", size: size)
-        label.text = description
-        label.textColor = color
-        label.textAlignment = .center
-        label.backgroundColor = UIColor.clear
-        label.frame = CGRect(x: 0, y: 0, width: size, height: size)
-        label.accessibilityElementsHidden = true
-        return label
-    }
-    
-    public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
-        let label = self.label(size, color: color)
-        UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, UIScreen.main.scale)
-        label.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext();
-        return image!
-    }
-    
-#elseif os(watchOS)
-    public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> WKInterfaceLabel {
-    load()
-        let label: WKInterfaceLabel!
-        let customFont = UIFont(name: "ionicons", size: size)
-        let text = description
-        let titleParagraphStyle = NSMutableParagraphStyle()
-        titleParagraphStyle.alignment = .center
-        let attributes = [
-            NSForegroundColorAttributeName : color,
-            NSFontAttributeName : customFont!,
-            NSTextEffectAttributeName : NSTextEffectLetterpressStyle,
-            NSParagraphStyleAttributeName : titleParagraphStyle
-        ] as [String : Any]
-        let attrStr = NSAttributedString(string: text, attributes: attributes)
-        label.setAttributedText(attrStr)
-        return label
-    }
-    
-    public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
-        color.setFill()
-        self.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image!
-    }
-#else
-    public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> UILabel {
-		load()
-		let label = UILabel()
-		label.font = UIFont(name: "ionicons", size: size)
-		label.text = description
-		label.textColor = color
-		label.textAlignment = .center
-		label.backgroundColor = UIColor.clear
-		label.frame = CGRect(x: 0, y: 0, width: size, height: size)
-		label.accessibilityElementsHidden = true
-		return label
-	}
-	
-    public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
-		let label = self.label(size, color: color)
-		UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, UIScreen.main.scale)
-		label.layer.render(in: UIGraphicsGetCurrentContext()!)
-		let image = UIGraphicsGetImageFromCurrentImageContext()
-		UIGraphicsEndImageContext();
-		return image!
-	}
-#endif
-    
-    public var description : String {
-        return String(describing: UnicodeScalar(rawValue)!)
-    }
-
 	case none = 0x0
 	case alert = 0xf101
 	case alertCircled = 0xf100
@@ -854,4 +756,77 @@ public enum Ionicons : UInt16, CustomStringConvertible {
 	case woman = 0xf25d
 	case wrench = 0xf2ba
 	case xbox = 0xf30c
+}
+
+extension Ionicons {
+    private func load(){
+        guard loaded != true else {
+            return
+        }
+        
+        loaded = true
+        
+        let inData = try? Data(contentsOf: URL(fileURLWithPath: Bundle(identifier: "org.cocoapods.IoniconsSwift")!.path(forResource: "ionicons", ofType: "ttf")!))
+        var error : Unmanaged<CFError>?
+        let provider = CGDataProvider(data: inData as! CFData)
+        let font = CGFont(provider!)
+        
+        if !CTFontManagerRegisterGraphicsFont(font, &error) {
+            let errorDescription = CFErrorCopyDescription(error!.takeRetainedValue())
+            print("Failed to load font: ", errorDescription as! String)
+        }
+    }
+    
+    #if os(iOS) || os(tvOS)
+    public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> UILabel {
+        load()
+        let label = UILabel()
+        label.font = UIFont(name: "ionicons", size: size)
+        label.text = description
+        label.textColor = color
+        label.textAlignment = .center
+        label.backgroundColor = UIColor.clear
+        label.frame = CGRect(x: 0, y: 0, width: size, height: size)
+        label.accessibilityElementsHidden = true
+        return label
+    }
+    
+    public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
+        let label = self.label(size, color: color)
+        UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, UIScreen.main.scale)
+        label.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext();
+        return image!
+    }
+    
+    #else
+    @available(OSX 11.0, *)
+    public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> UILabel {
+        load()
+        let label = UILabel()
+        label.font = UIFont(name: "ionicons", size: size)
+        label.text = description
+        label.textColor = color
+        label.textAlignment = .center
+        label.backgroundColor = UIColor.clear
+        label.frame = CGRect(x: 0, y: 0, width: size, height: size)
+        label.accessibilityElementsHidden = true
+        return label
+    }
+    
+    @available(OSX 2.0, *)
+    public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
+        let label = self.label(size, color: color)
+        UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, UIScreen.main.scale)
+        label.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext();
+        return image!
+    }
+    #endif
+    
+    public var description : String {
+        return String(describing: UnicodeScalar(rawValue)!)
+    }
 }
