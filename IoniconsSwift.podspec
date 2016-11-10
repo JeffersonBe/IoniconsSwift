@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
   s.social_media_url      = "http://twitter.com/tidwall"
   s.platform              = :ios, "8.0"
   s.source                = { :git => "https://github.com/tidwall/IoniconsSwift.git", :tag => "#{s.version}" }
-  s.source_files          = "IoniconsSwift/*.swift"
-  s.resources             = ["IoniconsSwift/*.ttf"]
+  s.source_files          = "Source/*.swift"
+  s.resources             = ["Source/*.ttf"]
   s.framework             = "UIKit"
   s.requires_arc          = true
 end
