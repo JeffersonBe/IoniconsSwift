@@ -9,6 +9,7 @@
 *
 * The Ionicons TTF font file was originated from http://ionicons.com/
 */
+
 import UIKit
 
 private var loaded = false

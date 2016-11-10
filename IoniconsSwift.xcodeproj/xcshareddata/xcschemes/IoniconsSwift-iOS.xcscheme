@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,22 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "03DB26081B27577700F9F073"
-               BuildableName = "IoniconsSwift.framework"
-               BlueprintName = "IoniconsSwift"
-               ReferencedContainer = "container:IoniconsSwift.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03DB26131B27577700F9F073"
-               BuildableName = "IoniconsSwiftTests.xctest"
-               BlueprintName = "IoniconsSwiftTests"
+               BuildableName = "IoniconsSwift-iOS.framework"
+               BlueprintName = "IoniconsSwift-iOS"
                ReferencedContainer = "container:IoniconsSwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,31 +28,12 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03DB26131B27577700F9F073"
-               BuildableName = "IoniconsSwiftTests.xctest"
-               BlueprintName = "IoniconsSwiftTests"
-               ReferencedContainer = "container:IoniconsSwift.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "03DB26081B27577700F9F073"
-            BuildableName = "IoniconsSwift.framework"
-            BlueprintName = "IoniconsSwift"
-            ReferencedContainer = "container:IoniconsSwift.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -79,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "03DB26081B27577700F9F073"
-            BuildableName = "IoniconsSwift.framework"
-            BlueprintName = "IoniconsSwift"
+            BuildableName = "IoniconsSwift-iOS.framework"
+            BlueprintName = "IoniconsSwift-iOS"
             ReferencedContainer = "container:IoniconsSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -97,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "03DB26081B27577700F9F073"
-            BuildableName = "IoniconsSwift.framework"
-            BlueprintName = "IoniconsSwift"
+            BuildableName = "IoniconsSwift-iOS.framework"
+            BlueprintName = "IoniconsSwift-iOS"
             ReferencedContainer = "container:IoniconsSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
