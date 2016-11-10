@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4438B4601DD4892A00807ABB"
-               BuildableName = "IoniconsSwifttvOS.framework"
-               BlueprintName = "IoniconsSwifttvOS"
+               BuildableName = "IoniconsSwift.framework"
+               BlueprintName = "IoniconsSwift tvOS"
                ReferencedContainer = "container:IoniconsSwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4438B4601DD4892A00807ABB"
-            BuildableName = "IoniconsSwifttvOS.framework"
-            BlueprintName = "IoniconsSwifttvOS"
+            BuildableName = "IoniconsSwift.framework"
+            BlueprintName = "IoniconsSwift tvOS"
             ReferencedContainer = "container:IoniconsSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4438B4601DD4892A00807ABB"
-            BuildableName = "IoniconsSwifttvOS.framework"
-            BlueprintName = "IoniconsSwifttvOS"
+            BuildableName = "IoniconsSwift.framework"
+            BlueprintName = "IoniconsSwift tvOS"
             ReferencedContainer = "container:IoniconsSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

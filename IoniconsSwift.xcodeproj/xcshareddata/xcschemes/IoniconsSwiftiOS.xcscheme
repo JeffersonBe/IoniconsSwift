@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "03DB26081B27577700F9F073"
-               BuildableName = "IoniconsSwiftiOS.framework"
-               BlueprintName = "IoniconsSwiftiOS"
+               BuildableName = "IoniconsSwift.framework"
+               BlueprintName = "IoniconsSwift iOS"
                ReferencedContainer = "container:IoniconsSwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "03DB26081B27577700F9F073"
-            BuildableName = "IoniconsSwiftiOS.framework"
-            BlueprintName = "IoniconsSwiftiOS"
+            BuildableName = "IoniconsSwift.framework"
+            BlueprintName = "IoniconsSwift iOS"
             ReferencedContainer = "container:IoniconsSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "03DB26081B27577700F9F073"
-            BuildableName = "IoniconsSwiftiOS.framework"
-            BlueprintName = "IoniconsSwiftiOS"
+            BuildableName = "IoniconsSwift.framework"
+            BlueprintName = "IoniconsSwift iOS"
             ReferencedContainer = "container:IoniconsSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
