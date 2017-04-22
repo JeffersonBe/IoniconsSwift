@@ -20,9 +20,9 @@
 		03DB260D1B27577700F9F073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DB26251B27597000F9F073 /* ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ionicons.swift; sourceTree = "<group>"; };
 		03DB26261B27597000F9F073 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
-		4438B4531DD487E000807ABB /* InioniconsSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InioniconsSwift.h; path = InioniconsSwift.h; sourceTree = "<group>"; };
+		4438B4531DD487E000807ABB /* InioniconsSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InioniconsSwift.h; sourceTree = "<group>"; };
 		4438B4611DD4892A00807ABB /* IoniconsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IoniconsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4438B46F1DD48B4D00807ABB /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		4438B46F1DD48B4D00807ABB /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,6 @@
 				03DB26251B27597000F9F073 /* ionicons.swift */,
 				03DB26261B27597000F9F073 /* ionicons.ttf */,
 			);
-			name = Source;
 			path = Source;
 			sourceTree = "<group>";
 		};
@@ -78,7 +77,6 @@
 				03DB260D1B27577700F9F073 /* Info.plist */,
 				4438B4531DD487E000807ABB /* InioniconsSwift.h */,
 			);
-			name = "Supporting Files";
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
@@ -152,7 +150,7 @@
 				TargetAttributes = {
 					03DB26081B27577700F9F073 = {
 						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 					};
 					4438B4601DD4892A00807ABB = {
 						CreatedOnToolsVersion = 8.1;
@@ -429,6 +427,7 @@
 				4438B4681DD4892B00807ABB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
