@@ -9,48 +9,27 @@
 *
 * The Ionicons TTF font file was originated from http://ionicons.com/
 */
+
 import UIKit
 
-private var loaded = false
-private func load(){
-	if loaded {
-		return
-	}
-	loaded = true
-    let inData = try? Data(contentsOf: URL(fileURLWithPath: Bundle(identifier: "org.cocoapods.IoniconsSwift")!.path(forResource: "ionicons", ofType: "ttf")!))
-	var error : Unmanaged<CFError>?
-	let provider = CGDataProvider(data: inData as! CFData)
-	let font = CGFont(provider!)
-	if !CTFontManagerRegisterGraphicsFont(font, &error) {
-		let errorDescription = CFErrorCopyDescription(error!.takeRetainedValue())
-		NSLog("Failed to load font: %@", errorDescription as! String);
-	}
-}
-public enum Ionicons : UInt16, CustomStringConvertible {
-    public func label(_ size: CGFloat, color: UIColor = UIColor.black) -> UILabel {
-		load()
-		let label = UILabel()
-		label.font = UIFont(name: "ionicons", size: size)
-		label.text = description
-		label.textColor = color
-		label.textAlignment = .center
-		label.backgroundColor = UIColor.clear
-		label.frame = CGRect(x: 0, y: 0, width: size, height: size)
-		label.accessibilityElementsHidden = true
-		return label
-	}
-	public func image(_ size: CGFloat, color: UIColor = UIColor.black) -> UIImage {
-		let label = self.label(size, color: color)
-		UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, UIScreen.main.scale)
-		label.layer.render(in: UIGraphicsGetCurrentContext()!)
-		let image = UIGraphicsGetImageFromCurrentImageContext()
-		UIGraphicsEndImageContext();
-		return image!
-	}
-    public var description : String {
-        return String(describing: UnicodeScalar(rawValue)!)
-    }
+private var loaded: Bool = false
 
+private func load(){
+    
+    guard loaded == false else {
+        return
+    }
+    
+    do {
+        let _ = try Data(contentsOf: URL(fileURLWithPath: (Bundle(identifier: "org.cocoapods.IoniconsSwift")!.path(forResource: "ionicons", ofType: "ttf"))!))
+    } catch {
+        print("Failed to load font: \(error.localizedDescription)")
+    }
+    
+    loaded = true
+}
+
+public enum Ionicons : UInt16, CustomStringConvertible {
 	case none = 0x0
 	case alert = 0xf101
 	case alertCircled = 0xf100
@@ -785,4 +764,33 @@ public enum Ionicons : UInt16, CustomStringConvertible {
 	case woman = 0xf25d
 	case wrench = 0xf2ba
 	case xbox = 0xf30c
+}
+
+extension Ionicons {
+    
+    public var description : String {
+        return String(describing: UnicodeScalar(rawValue))
+    }
+    
+    public func label(_ size: CGFloat, color: UIColor = .black) -> UILabel {
+        load()
+        let label = UILabel()
+        label.font = UIFont(name: "ionicons", size: size)
+        label.text = description
+        label.textColor = color
+        label.textAlignment = .center
+        label.backgroundColor = .clear
+        label.frame = CGRect(x: 0, y: 0, width: size, height: size)
+        label.accessibilityElementsHidden = true
+        return label
+    }
+    
+    public func image(_ size: CGFloat, color: UIColor = .black) -> UIImage {
+        let label = self.label(size, color: color)
+        UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, UIScreen.main.scale)
+        label.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext();
+        return image!
+    }
 }
