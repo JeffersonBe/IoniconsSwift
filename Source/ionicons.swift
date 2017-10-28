@@ -14,16 +14,57 @@ import UIKit
 
 private var loaded: Bool = false
 
+//private func load(){
+//    if loaded {
+//        return
+//    }
+//    loaded = true
+//    let inData = try? Data(contentsOf: URL(fileURLWithPath: Bundle(identifier: "org.cocoapods.IoniconsSwift")!.path(forResource: "ionicons", ofType: "ttf")!))
+//    var error : Unmanaged<CFError>?
+//    let provider = CGDataProvider(data: inData! as CFData)
+//    let font = CGFont(provider!)
+//    if !CTFontManagerRegisterGraphicsFont(font!, &error) {
+//        let errorDescription = CFErrorCopyDescription(error!.takeRetainedValue())
+//        NSLog("Failed to load font: %@", errorDescription! as String);
+//    }
+//}
+
 private func load(){
     
     guard loaded == false else {
         return
     }
-    
-    do {
-        let _ = try Data(contentsOf: URL(fileURLWithPath: (Bundle(identifier: "org.cocoapods.IoniconsSwift")!.path(forResource: "ionicons", ofType: "ttf"))!))
-    } catch {
-        print("Failed to load font: \(error.localizedDescription)")
+
+    guard let IoniconsSwiftBundle = Bundle(identifier: "org.cocoapods.IoniconsSwift") else {
+        print("Unable to load Bundle")
+        return
+    }
+
+    guard let fileURLWithPathForIoniconsSwift = IoniconsSwiftBundle.path(forResource: "ionicons", ofType: "ttf") else {
+        print("Unable to find path for Bundle")
+        return
+    }
+
+    guard let inData = try? Data(contentsOf: URL(fileURLWithPath: fileURLWithPathForIoniconsSwift)) else {
+        print("Unable to load Data")
+        return
+    }
+
+    guard let provider = CGDataProvider(data: inData as CFData) else {
+        print("Unable to load provider")
+        return
+    }
+
+    guard let font = CGFont(provider) else {
+        print("Unable to load font")
+        return
+    }
+
+    var error : Unmanaged<CFError>?
+
+    guard !CTFontManagerRegisterGraphicsFont(font, &error) else {
+        print("CTFontManagerRegisterGraphicsFont error")
+        return
     }
     
     loaded = true
