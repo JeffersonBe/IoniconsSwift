@@ -32,7 +32,7 @@ private func load(){
 
     let font = CGFont(provider)
 
-    guard CTFontManagerRegisterGraphicsFont(font!, &error) == true else {
+    guard CTFontManagerRegisterGraphicsFont(font, &error) == true else {
         print("Error loading font. Font is possibly already registered.")
         return
     }
