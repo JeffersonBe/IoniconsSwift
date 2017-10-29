@@ -47,7 +47,7 @@ private func load(){
 
     var error : Unmanaged<CFError>?
 
-    guard !CTFontManagerRegisterGraphicsFont(font, &error) else {
+    guard CTFontManagerRegisterGraphicsFont(font, &error) else {
         print("CTFontManagerRegisterGraphicsFont \(String(describing: error))")
         return
     }
