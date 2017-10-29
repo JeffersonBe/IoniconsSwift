@@ -48,7 +48,9 @@ private func load(){
     var error : Unmanaged<CFError>?
 
     guard CTFontManagerRegisterGraphicsFont(font, &error) else {
-        print("CTFontManagerRegisterGraphicsFont \(String(describing: error))")
+        let errorDescription: CFString = CFErrorCopyDescription(error!.takeUnretainedValue())
+        let nsError = error!.takeUnretainedValue() as AnyObject as! NSError
+        NSException(name: NSExceptionName.internalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
         return
     }
 
