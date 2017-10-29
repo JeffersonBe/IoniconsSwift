@@ -30,9 +30,9 @@ private func load(){
 
     var error: Unmanaged<CFError>?
 
-    guard let font = CGFont(provider) else { return }
+    let font = CGFont(provider)
 
-    guard CTFontManagerRegisterGraphicsFont(font, &error) == true else {
+    guard CTFontManagerRegisterGraphicsFont(font!, &error) == true else {
         print("Error loading font. Font is possibly already registered.")
         return
     }
