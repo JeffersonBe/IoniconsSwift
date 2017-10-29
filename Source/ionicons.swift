@@ -15,29 +15,18 @@ import UIKit
 private var loaded: Bool = false
 
 private func load(){
-    
-    guard loaded == false else {
+    if loaded {
         return
     }
-
-    let bundle = Bundle(identifier: "org.cocoapods.IoniconsSwift")
-    guard let fontPath = bundle?.path(forResource: "ionicons", ofType: "ttf"),
-        let data = try? Data(contentsOf: URL(fileURLWithPath: fontPath)),
-        let provider = CGDataProvider(data: data as CFData)
-        else {
-            return
-    }
-
-    var error: Unmanaged<CFError>?
-
-    let font = CGFont(provider)
-
-    guard CTFontManagerRegisterGraphicsFont(font, &error) == true else {
-        print("Error loading font. Font is possibly already registered.")
-        return
-    }
-
     loaded = true
+    let inData = try? Data(contentsOf: URL(fileURLWithPath: Bundle(identifier: "org.cocoapods.IoniconsSwift")!.path(forResource: "ionicons", ofType: "ttf")!))
+    var error : Unmanaged<CFError>?
+    let provider = CGDataProvider(data: inData as! CFData)
+    let font = CGFont(provider!)
+    if !CTFontManagerRegisterGraphicsFont(font, &error) {
+        let errorDescription = CFErrorCopyDescription(error!.takeRetainedValue())
+        NSLog("Failed to load font: %@", errorDescription as! String);
+    }
 }
 
 public enum Ionicons : UInt16, CustomStringConvertible {
