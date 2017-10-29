@@ -23,16 +23,18 @@ private func load(){
     let bundle = Bundle(identifier: "org.cocoapods.IoniconsSwift")
     guard let fontPath = bundle?.path(forResource: "ionicons", ofType: "ttf"),
         let data = try? Data(contentsOf: URL(fileURLWithPath: fontPath)),
-        let provider = CGDataProvider(data: data as CFData),
-        let font = CGFont(provider)
+        let provider = CGDataProvider(data: data as CFData)
         else {
             return
     }
 
     var error: Unmanaged<CFError>?
 
-    if !CTFontManagerRegisterGraphicsFont(font, &error) {
+    guard let font = CGFont(provider) else { return }
+
+    guard CTFontManagerRegisterGraphicsFont(font, &error) == true else {
         print("Error loading font. Font is possibly already registered.")
+        return
     }
 
     loaded = true
