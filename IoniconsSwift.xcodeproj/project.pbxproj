@@ -9,17 +9,32 @@
 /* Begin PBXBuildFile section */
 		031476131B39B59900698F67 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03DB26261B27597000F9F073 /* ionicons.ttf */; };
 		03DB26271B27597000F9F073 /* ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB26251B27597000F9F073 /* ionicons.swift */; };
+		442F3D5B1EACF2B200B1AE4D /* IoniconsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442F3D5A1EACF2B200B1AE4D /* IoniconsSwiftTests.swift */; };
+		442F3D5D1EACF2B200B1AE4D /* IoniconsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB26091B27577700F9F073 /* IoniconsSwift.framework */; };
 		4438B4691DD48A3F00807ABB /* InioniconsSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4438B4531DD487E000807ABB /* InioniconsSwift.h */; };
 		4438B46C1DD48ADD00807ABB /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03DB26261B27597000F9F073 /* ionicons.ttf */; };
 		4438B4731DD48BB700807ABB /* ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB26251B27597000F9F073 /* ionicons.swift */; };
 		4438B4751DD48D2200807ABB /* InioniconsSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4438B4531DD487E000807ABB /* InioniconsSwift.h */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		442F3D5E1EACF2B200B1AE4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03DB26001B27577700F9F073 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03DB26081B27577700F9F073;
+			remoteInfo = "IoniconsSwift iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		03DB26091B27577700F9F073 /* IoniconsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IoniconsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DB260D1B27577700F9F073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DB26251B27597000F9F073 /* ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ionicons.swift; sourceTree = "<group>"; };
 		03DB26261B27597000F9F073 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
+		442F3D581EACF2B100B1AE4D /* IoniconsSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IoniconsSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		442F3D5A1EACF2B200B1AE4D /* IoniconsSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoniconsSwiftTests.swift; sourceTree = "<group>"; };
+		442F3D5C1EACF2B200B1AE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4438B4531DD487E000807ABB /* InioniconsSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InioniconsSwift.h; sourceTree = "<group>"; };
 		4438B4611DD4892A00807ABB /* IoniconsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IoniconsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4438B46F1DD48B4D00807ABB /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
@@ -30,6 +45,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		442F3D551EACF2B100B1AE4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				442F3D5D1EACF2B200B1AE4D /* IoniconsSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +69,7 @@
 		03DB25FF1B27577700F9F073 = {
 			isa = PBXGroup;
 			children = (
+				442F3D591EACF2B200B1AE4D /* IoniconsSwiftTests */,
 				03DB260A1B27577700F9F073 /* Products */,
 				03DB260B1B27577700F9F073 /* Source */,
 			);
@@ -56,6 +80,7 @@
 			children = (
 				03DB26091B27577700F9F073 /* IoniconsSwift.framework */,
 				4438B4611DD4892A00807ABB /* IoniconsSwift.framework */,
+				442F3D581EACF2B100B1AE4D /* IoniconsSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +93,15 @@
 				03DB26261B27597000F9F073 /* ionicons.ttf */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		442F3D591EACF2B200B1AE4D /* IoniconsSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				442F3D5A1EACF2B200B1AE4D /* IoniconsSwiftTests.swift */,
+				442F3D5C1EACF2B200B1AE4D /* Info.plist */,
+			);
+			path = IoniconsSwiftTests;
 			sourceTree = "<group>";
 		};
 		4438B4741DD48CC800807ABB /* Supporting Files */ = {
@@ -120,6 +154,24 @@
 			productReference = 03DB26091B27577700F9F073 /* IoniconsSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		442F3D571EACF2B100B1AE4D /* IoniconsSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 442F3D621EACF2B200B1AE4D /* Build configuration list for PBXNativeTarget "IoniconsSwiftTests" */;
+			buildPhases = (
+				442F3D541EACF2B100B1AE4D /* Sources */,
+				442F3D551EACF2B100B1AE4D /* Frameworks */,
+				442F3D561EACF2B100B1AE4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				442F3D5F1EACF2B200B1AE4D /* PBXTargetDependency */,
+			);
+			name = IoniconsSwiftTests;
+			productName = IoniconsSwiftTests;
+			productReference = 442F3D581EACF2B100B1AE4D /* IoniconsSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4438B4601DD4892A00807ABB /* IoniconsSwift tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4438B4661DD4892B00807ABB /* Build configuration list for PBXNativeTarget "IoniconsSwift tvOS" */;
@@ -144,13 +196,18 @@
 		03DB26001B27577700F9F073 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0800;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "ONcast, LLC";
 				TargetAttributes = {
 					03DB26081B27577700F9F073 = {
 						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
+					};
+					442F3D571EACF2B100B1AE4D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = DXXE2BH2EU;
+						ProvisioningStyle = Automatic;
 					};
 					4438B4601DD4892A00807ABB = {
 						CreatedOnToolsVersion = 8.1;
@@ -173,6 +230,7 @@
 			targets = (
 				03DB26081B27577700F9F073 /* IoniconsSwift iOS */,
 				4438B4601DD4892A00807ABB /* IoniconsSwift tvOS */,
+				442F3D571EACF2B100B1AE4D /* IoniconsSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -183,6 +241,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				031476131B39B59900698F67 /* ionicons.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		442F3D561EACF2B100B1AE4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +270,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		442F3D541EACF2B100B1AE4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				442F3D5B1EACF2B200B1AE4D /* IoniconsSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4438B45C1DD4892A00807ABB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +288,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		442F3D5F1EACF2B200B1AE4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03DB26081B27577700F9F073 /* IoniconsSwift iOS */;
+			targetProxy = 442F3D5E1EACF2B200B1AE4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		03DB261D1B27577700F9F073 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -224,14 +305,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -275,14 +362,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -325,7 +418,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.IoniconsSwift;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -343,6 +437,41 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.IoniconsSwift;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		442F3D601EACF2B200B1AE4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DXXE2BH2EU;
+				INFOPLIST_FILE = IoniconsSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.IoniconsSwift.IoniconsSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		442F3D611EACF2B200B1AE4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = DXXE2BH2EU;
+				INFOPLIST_FILE = IoniconsSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.IoniconsSwift.IoniconsSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -360,7 +489,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/IoniconsSwift-tvOS/Info-tvOS.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.IoniconsSwift;
@@ -386,7 +515,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/IoniconsSwift-tvOS/Info-tvOS.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.IoniconsSwift;
@@ -416,6 +545,15 @@
 			buildConfigurations = (
 				03DB26201B27577700F9F073 /* Debug */,
 				03DB26211B27577700F9F073 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		442F3D621EACF2B200B1AE4D /* Build configuration list for PBXNativeTarget "IoniconsSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				442F3D601EACF2B200B1AE4D /* Debug */,
+				442F3D611EACF2B200B1AE4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
